@@ -1,0 +1,26 @@
+[2m3:49:09 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Cannot read properties of undefined (reading 'fetch')[39m
+      at Object.fetchAsset (D:/Documents/OneDrive/PropertyAgent/Marketing/MatchEdition-Web/worker/index.ts:35:42)
+      at handleImageOptimization (D:/Documents/OneDrive/PropertyAgent/Marketing/MatchEdition-Web/node_modules/vinext/src/server/image-optimization.ts:237:33)
+      at Object.fetch (D:/Documents/OneDrive/PropertyAgent/Marketing/MatchEdition-Web/worker/index.ts:34:14)
+      at null.<anonymous> (workers/runner-worker/index.js:359:20)
+      at maybeCaptureError (workers/runner-worker/index.js:51:10)
+[2m3:49:09 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Cannot read properties of undefined (reading 'fetch')[39m
+      at Object.fetchAsset (D:/Documents/OneDrive/PropertyAgent/Marketing/MatchEdition-Web/worker/index.ts:35:42)
+      at handleImageOptimization (D:/Documents/OneDrive/PropertyAgent/Marketing/MatchEdition-Web/node_modules/vinext/src/server/image-optimization.ts:237:33)
+      at Object.fetch (D:/Documents/OneDrive/PropertyAgent/Marketing/MatchEdition-Web/worker/index.ts:34:14)
+      at null.<anonymous> (workers/runner-worker/index.js:359:20)
+      at maybeCaptureError (workers/runner-worker/index.js:51:10)
+[2m3:49:09 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Cannot read properties of undefined (reading 'fetch')[39m
+      at Object.fetchAsset (D:/Documents/OneDrive/PropertyAgent/Marketing/MatchEdition-Web/worker/index.ts:35:42)
+      at handleImageOptimization (D:/Documents/OneDrive/PropertyAgent/Marketing/MatchEdition-Web/node_modules/vinext/src/server/image-optimization.ts:237:33)
+      at Object.fetch (D:/Documents/OneDrive/PropertyAgent/Marketing/MatchEdition-Web/worker/index.ts:34:14)
+      at null.<anonymous> (workers/runner-worker/index.js:359:20)
+      at maybeCaptureError (workers/runner-worker/index.js:51:10)
+[2m3:49:09 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Cannot read properties of undefined (reading 'fetch')[39m
+      at Object.fetchAsset (D:/Documents/OneDrive/PropertyAgent/Marketing/MatchEdition-Web/worker/index.ts:35:42)
+      at handleImageOptimization (D:/Documents/OneDrive/PropertyAgent/Marketing/MatchEdition-Web/node_modules/vinext/src/server/image-optimization.ts:237:33)
+      at Object.fetch (D:/Documents/OneDrive/PropertyAgent/Marketing/MatchEdition-Web/worker/index.ts:34:14)
+      at null.<anonymous> (workers/runner-worker/index.js:359:20)
+      at maybeCaptureError (workers/runner-worker/index.js:51:10)
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
