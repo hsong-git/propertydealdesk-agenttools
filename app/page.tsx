@@ -10,7 +10,6 @@ import {
   Copy,
   Eye,
   MagnifyingGlass,
-  PlayCircle,
   ShieldCheck,
   Sparkle,
   X,
@@ -39,7 +38,7 @@ export default function Home() {
         </a>
         <nav aria-label="Main navigation">
           <a href="#how-it-works">How it works</a>
-          <a href="#see-it">See it in action</a>
+          <a href="#see-it">Intro video</a>
           <button className="button button-small" onClick={() => setShowInvite(true)}>
             Request a private demo
           </button>
@@ -57,7 +56,7 @@ export default function Home() {
             <button className="button" onClick={() => setShowInvite(true)}>
               Request a private demo <ArrowRight weight="bold" />
             </button>
-            <a className="text-link" href="#see-it"><PlayCircle weight="fill" /> Watch how it works</a>
+            <a className="text-link" href="#how-it-works"><Sparkle weight="fill" /> See how it helps</a>
           </div>
           <div className="trust-row">
             <span><CheckCircle weight="fill" /> Possible matches</span>
@@ -75,26 +74,42 @@ export default function Home() {
         <p>Viewings, appointments, driving and client calls do not stop the co-broke messages. Match Edition helps you notice what may matter while you stay focused on your clients.</p>
       </section>
 
-      <section className="section dashboard-feature" id="product-view">
+      <section className="section signal-feature" id="product-view">
         <div className="section-heading">
-          <span className="section-kicker">Readable product view</span>
-          <h2>Review possible matches in one clear workspace.</h2>
-          <p>The dashboard is shown larger here so agents can see the match queue, property context and review flow clearly before asking for a private demo.</p>
+          <span className="section-kicker">What it helps you notice</span>
+          <h2>Turn busy co-broke messages into possible next actions.</h2>
+          <p>This private beta is explained with a simple concept view only. Actual setup and review flow will be shown personally during onboarding.</p>
         </div>
-        <div className="dashboard-shell" aria-label="Large Match Edition dashboard preview">
-          <div className="window-bar"><span></span><span></span><span></span></div>
-          <img src="/match-dashboard.png" alt="Match Edition dashboard with possible match records and review details" />
+        <div className="signal-map" aria-label="Conceptual Match Edition flow">
+          <article className="signal-column">
+            <div className="signal-icon"><ClipboardText weight="duotone" /></div>
+            <span>Incoming group posts</span>
+            <h3>Noisy daily messages</h3>
+            <p>WTB, WTR, WTS and WTL posts continue arriving while you are busy with appointments.</p>
+          </article>
+          <article className="signal-column highlight">
+            <div className="signal-icon"><MagnifyingGlass weight="duotone" /></div>
+            <span>Private matching support</span>
+            <h3>Possible fit detected</h3>
+            <p>Relevant demand and supply signals are brought forward for your review.</p>
+          </article>
+          <article className="signal-column">
+            <div className="signal-icon"><BellRinging weight="duotone" /></div>
+            <span>Phone awareness</span>
+            <h3>Review earlier</h3>
+            <p>You decide whether the possible opportunity deserves a follow-up.</p>
+          </article>
         </div>
         <div className="detail-grid">
-          <article className="detail-panel queue-panel">
-            <span className="section-kicker">Match queue</span>
-            <h3>Likely opportunities move to the front.</h3>
-            <p>Use the queue to review possible buyer, tenant, WTS and WTL connections faster.</p>
+          <article className="detail-panel">
+            <span className="section-kicker">Example signal</span>
+            <h3>Buyer wants double storey in Bandar Botanic.</h3>
+            <p>A matching listing signal may be surfaced for agent review.</p>
           </article>
-          <article className="detail-panel alert-panel">
-            <span className="section-kicker">Phone alert concept</span>
-            <h3>Notice the opportunity while you are busy.</h3>
-            <p>Alerts are meant to support agent judgment, not replace your own review.</p>
+          <article className="detail-panel">
+            <span className="section-kicker">Agent control</span>
+            <h3>Possible match, not guaranteed deal.</h3>
+            <p>Match Edition helps you notice earlier. You still verify the details and decide the next move.</p>
           </article>
         </div>
       </section>
@@ -114,8 +129,19 @@ export default function Home() {
       </section>
 
       <section className="section product-story">
-        <div className="product-image">
-          <img src="/phone-alert.png" alt="PropertyDealDesk phone alert concept for possible matches" />
+        <div className="signal-visual" aria-label="Conceptual possible match notification">
+          <div className="notification-card">
+            <BellRinging weight="fill" />
+            <div>
+              <strong>Possible match to review</strong>
+              <span>Buyer requirement and listing signal may fit.</span>
+            </div>
+          </div>
+          <div className="mini-feed">
+            <div><span>WTB</span><p>Looking for a family home near Klang.</p></div>
+            <div><span>WTS</span><p>Owner listing available in matching area.</p></div>
+            <div><span>Review</span><p>Agent checks details before action.</p></div>
+          </div>
         </div>
         <div className="product-copy">
           <span className="section-kicker">Built around agent judgment</span>
@@ -130,14 +156,17 @@ export default function Home() {
       </section>
 
       <section className="section video-section" id="see-it">
-        <div className="section-heading centered">
+        <div className="video-copy">
           <span className="section-kicker">See Match Edition in action</span>
-          <h2>A practical assistant for opportunity detection</h2>
-          <p>Watch the short introduction, then ask for a guided private demo using your normal agent workflow.</p>
+          <h2>A short vertical intro made for agents on the phone.</h2>
+          <p>Use this as a private walkthrough asset. It introduces the outcome without showing unavailable product screens or private customer details.</p>
+          <button className="button" onClick={() => setShowInvite(true)}>
+            Request a private demo <ArrowRight weight="bold" />
+          </button>
         </div>
-        <div className="video-frame">
+        <div className="phone-video-frame">
           <video controls preload="metadata" poster="/brand-hero.png">
-            <source src="/match-edition-explainer.mp4" type="video/mp4" />
+            <source src="/match-edition-intro-vertical.mp4" type="video/mp4" />
             Your browser does not support this video.
           </video>
         </div>
