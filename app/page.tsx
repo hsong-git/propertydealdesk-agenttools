@@ -74,6 +74,23 @@ export default function Home() {
         <p>Viewings, appointments, driving and client calls do not stop the co-broke messages. Match Edition helps you notice what may matter while you stay focused on your clients.</p>
       </section>
 
+      <section className="section video-section" id="see-it">
+        <div className="video-copy">
+          <span className="section-kicker">See Match Edition in action</span>
+          <h2>A short vertical intro made for agents on the phone.</h2>
+          <p>Use this as a private walkthrough asset. It introduces the outcome without showing unavailable product screens or private customer details.</p>
+          <button className="button" onClick={() => setShowInvite(true)}>
+            Request a private demo <ArrowRight weight="bold" />
+          </button>
+        </div>
+        <div className="phone-video-frame">
+          <video controls preload="metadata" poster="/brand-hero.png">
+            <source src="/match-edition-intro-vertical.mp4" type="video/mp4" />
+            Your browser does not support this video.
+          </video>
+        </div>
+      </section>
+
       <section className="section photo-story">
         <div className="section-heading centered">
           <span className="section-kicker">Built for the working day</span>
@@ -126,18 +143,6 @@ export default function Home() {
             <p>You decide whether the possible opportunity deserves a follow-up.</p>
           </article>
         </div>
-        <div className="detail-grid">
-          <article className="detail-panel">
-            <span className="section-kicker">Example signal</span>
-            <h3>Buyer wants double storey in Bandar Botanic.</h3>
-            <p>A matching listing signal may be surfaced for agent review.</p>
-          </article>
-          <article className="detail-panel">
-            <span className="section-kicker">Agent control</span>
-            <h3>Possible match, not guaranteed deal.</h3>
-            <p>Match Edition helps you notice earlier. You still verify the details and decide the next move.</p>
-          </article>
-        </div>
       </section>
 
       <section className="section" id="how-it-works">
@@ -178,23 +183,6 @@ export default function Home() {
             <li><ShieldCheck weight="fill" /><div><strong>Your judgment comes first</strong><span>Suggestions are possible matches—not guaranteed deals.</span></div></li>
             <li><Car weight="fill" /><div><strong>Stay aware while busy</strong><span>Spend less time repeatedly checking group conversations.</span></div></li>
           </ul>
-        </div>
-      </section>
-
-      <section className="section video-section" id="see-it">
-        <div className="video-copy">
-          <span className="section-kicker">See Match Edition in action</span>
-          <h2>A short vertical intro made for agents on the phone.</h2>
-          <p>Use this as a private walkthrough asset. It introduces the outcome without showing unavailable product screens or private customer details.</p>
-          <button className="button" onClick={() => setShowInvite(true)}>
-            Request a private demo <ArrowRight weight="bold" />
-          </button>
-        </div>
-        <div className="phone-video-frame">
-          <video controls preload="metadata" poster="/brand-hero.png">
-            <source src="/match-edition-intro-vertical.mp4" type="video/mp4" />
-            Your browser does not support this video.
-          </video>
         </div>
       </section>
 
