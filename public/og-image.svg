@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#062634"/>
+      <stop offset="0.48" stop-color="#093948"/>
+      <stop offset="1" stop-color="#086044"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#e7f5ef" stop-opacity="0.94"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="26" stdDeviation="28" flood-color="#031820" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1010" cy="90" r="220" fill="#91e0b8" opacity="0.12"/>
+  <circle cx="1090" cy="520" r="190" fill="#ffffff" opacity="0.07"/>
+  <circle cx="165" cy="530" r="260" fill="#1769aa" opacity="0.12"/>
+
+  <g transform="translate(72 72)">
+    <rect x="0" y="0" width="1056" height="486" rx="36" fill="#ffffff" opacity="0.08" stroke="#91e0b8" stroke-opacity="0.26"/>
+    <text x="48" y="72" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="800" letter-spacing="4" fill="#91e0b8">PROPERTYDEALDESK AGENT TOOLS</text>
+    <text x="48" y="164" font-family="Segoe UI, Arial, sans-serif" font-size="76" font-weight="800" fill="#ffffff">Match Edition</text>
+    <text x="48" y="220" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="600" fill="#d9e8e4">Stop Scrolling. Start Matching.</text>
+    <text x="48" y="296" font-family="Segoe UI, Arial, sans-serif" font-size="25" fill="#c4d3d6">Review possible buyer, tenant and inventory matches faster.</text>
+    <text x="48" y="338" font-family="Segoe UI, Arial, sans-serif" font-size="27" fill="#c4d3d6">Private beta by HS Ong for active co-broke agents.</text>
+
+    <g transform="translate(48 392)">
+      <rect x="0" y="0" width="206" height="54" rx="27" fill="#12845f"/>
+      <text x="103" y="36" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="800" fill="#ffffff">Possible matches</text>
+      <rect x="230" y="0" width="162" height="54" rx="27" fill="#e7f5ef" opacity="0.96"/>
+      <text x="311" y="36" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="800" fill="#086044">Phone alerts</text>
+      <rect x="416" y="0" width="204" height="54" rx="27" fill="#e7f5ef" opacity="0.96"/>
+      <text x="518" y="36" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="800" fill="#086044">Agent review</text>
+    </g>
+
+    <g transform="translate(738 94)" filter="url(#softShadow)">
+      <rect width="236" height="312" rx="28" fill="url(#card)"/>
+      <rect x="28" y="34" width="180" height="34" rx="17" fill="#12845f" opacity="0.16"/>
+      <text x="118" y="58" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" fill="#086044">Possible match</text>
+      <g transform="translate(34 100)">
+        <rect width="168" height="42" rx="14" fill="#ffffff"/>
+        <circle cx="22" cy="21" r="9" fill="#12845f"/>
+        <rect x="44" y="13" width="92" height="8" rx="4" fill="#5f716d" opacity="0.45"/>
+        <rect x="44" y="27" width="124" height="7" rx="3.5" fill="#5f716d" opacity="0.22"/>
+      </g>
+      <g transform="translate(34 162)">
+        <rect width="168" height="42" rx="14" fill="#ffffff"/>
+        <circle cx="22" cy="21" r="9" fill="#1769aa"/>
+        <rect x="44" y="13" width="112" height="8" rx="4" fill="#5f716d" opacity="0.45"/>
+        <rect x="44" y="27" width="96" height="7" rx="3.5" fill="#5f716d" opacity="0.22"/>
+      </g>
+      <g transform="translate(34 236)">
+        <rect width="168" height="40" rx="20" fill="#12845f"/>
+        <text x="84" y="27" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" fill="#ffffff">Review earlier</text>
+      </g>
+    </g>
+  </g>
+</svg>

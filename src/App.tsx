@@ -112,6 +112,27 @@ export default function App() {
         </div>
       </section>
 
+      <section className="section workflow-overview" aria-labelledby="workflow-overview-title">
+        <div className="section-heading centered">
+          <span className="section-kicker">Concept overview</span>
+          <h2 id="workflow-overview-title">How Match Edition supports your daily co-broke routine.</h2>
+          <p>
+            The idea is simple: reduce repeated scrolling, bring possible matches forward, and let
+            the agent decide what deserves a follow-up.
+          </p>
+        </div>
+        <figure className="workflow-card">
+          <img
+            src="/how-match-edition-works.png"
+            alt="Concept overview showing co-broke listing overload, Match Edition matching support, and phone match notifications"
+          />
+          <figcaption>
+            Concept visual for private beta explanation. Match Edition surfaces possible matches
+            for review; agents still verify details before taking action.
+          </figcaption>
+        </figure>
+      </section>
+
       <section className="section photo-story">
         <div className="section-heading centered">
           <span className="section-kicker">Built for the working day</span>
