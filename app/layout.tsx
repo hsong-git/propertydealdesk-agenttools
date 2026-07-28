@@ -5,8 +5,8 @@ import "./globals.css";
 const geist = Geist({ variable: "--font-geist", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PropertyDealDesk Match Edition | Stop Scrolling. Start Matching.",
-  description: "Spot possible buyer, tenant and listing opportunities earlier with PropertyDealDesk Match Edition.",
+  title: "Agent Tools by MyEvive | PropertyDealDesk Match Edition",
+  description: "Agent-facing tools for active Malaysian real estate agents, currently featuring PropertyDealDesk Match Edition.",
   icons: { icon: "/favicon.png", shortcut: "/favicon.png" },
 };
 

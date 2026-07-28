@@ -16,7 +16,7 @@ import {
 } from "@phosphor-icons/react";
 
 const inviteMessage =
-  "Hi HS Ong, I’m interested in seeing how PropertyDealDesk Match Edition works. Can you show me the private beta?";
+  "Hi HS Ong, I’m interested in Agent Tools / PropertyDealDesk Match Edition. Can you show me the private beta?";
 
 export default function Home() {
   const [showInvite, setShowInvite] = useState(false);
@@ -39,6 +39,7 @@ export default function Home() {
         <nav aria-label="Main navigation">
           <a href="#how-it-works">How it works</a>
           <a href="#see-it">Intro video</a>
+          <a href="https://property.myeviv.com/" target="_blank" rel="noreferrer">Inventory catalogue</a>
           <button className="button button-small" onClick={() => setShowInvite(true)}>
             Request a private demo
           </button>
@@ -47,16 +48,20 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <div className="eyebrow"><ShieldCheck weight="fill" /> Match Edition · Private beta</div>
-          <h1>PropertyDealDesk<br /><span>Match Edition</span></h1>
+          <div className="eyebrow"><ShieldCheck weight="fill" /> agenttools.myeviv.com · Private beta</div>
+          <h1>Agent Tools<br /><span>Match Edition</span></h1>
           <p className="hero-lead">
-            Stop scrolling. Start matching. Spot possible buyer, tenant and listing opportunities earlier without checking every co-broke message manually.
+            PropertyDealDesk Match Edition helps active co-broke agents spot possible buyer, tenant and listing opportunities earlier without checking every group manually.
           </p>
           <div className="hero-actions">
             <button className="button" onClick={() => setShowInvite(true)}>
               Request a private demo <ArrowRight weight="bold" />
             </button>
             <a className="text-link" href="#how-it-works"><Sparkle weight="fill" /> See how it helps</a>
+          </div>
+          <div className="catalogue-link">
+            <span>Looking for HS Ong's listings?</span>
+            <a href="https://property.myeviv.com/" target="_blank" rel="noreferrer">Open public inventory catalogue <ArrowRight weight="bold" /></a>
           </div>
           <div className="trust-row">
             <span><CheckCircle weight="fill" /> Possible matches</span>
@@ -203,18 +208,23 @@ export default function Home() {
 
       <section className="final-cta" id="private-beta">
         <div>
-          <span className="section-kicker light">Private beta · Limited onboarding</span>
+          <span className="section-kicker light">agenttools.myeviv.com · Limited onboarding</span>
           <h2>Spend less time checking.<br />Give good opportunities a better chance to find you.</h2>
         </div>
-        <button className="button button-light" onClick={() => setShowInvite(true)}>
-          Request a private demo <ArrowRight weight="bold" />
-        </button>
+        <div className="final-actions">
+          <button className="button button-light" onClick={() => setShowInvite(true)}>
+            Request a private demo <ArrowRight weight="bold" />
+          </button>
+          <a className="button button-outline-light" href="https://property.myeviv.com/" target="_blank" rel="noreferrer">
+            View inventory catalogue
+          </a>
+        </div>
       </section>
 
       <footer>
         <img src="/propertydealsdesk-logo.png" alt="PropertyDealDesk" />
-        <p>Match Edition · Turn Noise Into Opportunities</p>
-        <p>Possible matches require agent review. Availability is currently limited to selected private-beta users.</p>
+        <p>Agent Tools · Match Edition · Turn Noise Into Opportunities</p>
+        <p>Possible matches require agent review. Availability is currently limited to selected private-beta users. Public listings: <a href="https://property.myeviv.com/" target="_blank" rel="noreferrer">property.myeviv.com</a></p>
       </footer>
 
       {showInvite && (
