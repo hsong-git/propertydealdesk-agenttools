@@ -49,9 +49,9 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-copy">
           <div className="eyebrow"><ShieldCheck weight="fill" /> Match Edition · Private beta</div>
-          <h1>Stop scrolling.<br /><span>Start matching.</span></h1>
+          <h1>PropertyDealDesk<br /><span>Match Edition</span></h1>
           <p className="hero-lead">
-            Spot possible buyer, tenant and listing opportunities earlier—without checking every co-broke message manually.
+            Stop scrolling. Start matching. Spot possible buyer, tenant and listing opportunities earlier without checking every co-broke message manually.
           </p>
           <div className="hero-actions">
             <button className="button" onClick={() => setShowInvite(true)}>
@@ -65,18 +65,6 @@ export default function Home() {
             <span><CheckCircle weight="fill" /> You stay in control</span>
           </div>
         </div>
-
-        <div className="hero-visual" aria-label="PropertyDealDesk Match Edition dashboard preview">
-          <div className="visual-label"><Sparkle weight="fill" /> Possible match detected</div>
-          <img
-            src="/match-dashboard.png"
-            alt="Match Edition dashboard showing possible property matches"
-          />
-          <div className="alert-card">
-            <BellRinging weight="fill" />
-            <div><strong>New possible match</strong><span>Bandar Botanic · Below RM830k</span></div>
-          </div>
-        </div>
       </section>
 
       <section className="problem-band">
@@ -85,6 +73,30 @@ export default function Home() {
           <h2>Good opportunities should not depend on how fast you can scroll.</h2>
         </div>
         <p>Viewings, appointments, driving and client calls do not stop the co-broke messages. Match Edition helps you notice what may matter while you stay focused on your clients.</p>
+      </section>
+
+      <section className="section dashboard-feature" id="product-view">
+        <div className="section-heading">
+          <span className="section-kicker">Readable product view</span>
+          <h2>Review possible matches in one clear workspace.</h2>
+          <p>The dashboard is shown larger here so agents can see the match queue, property context and review flow clearly before asking for a private demo.</p>
+        </div>
+        <div className="dashboard-shell" aria-label="Large Match Edition dashboard preview">
+          <div className="window-bar"><span></span><span></span><span></span></div>
+          <img src="/match-dashboard.png" alt="Match Edition dashboard with possible match records and review details" />
+        </div>
+        <div className="detail-grid">
+          <article className="detail-panel queue-panel">
+            <span className="section-kicker">Match queue</span>
+            <h3>Likely opportunities move to the front.</h3>
+            <p>Use the queue to review possible buyer, tenant, WTS and WTL connections faster.</p>
+          </article>
+          <article className="detail-panel alert-panel">
+            <span className="section-kicker">Phone alert concept</span>
+            <h3>Notice the opportunity while you are busy.</h3>
+            <p>Alerts are meant to support agent judgment, not replace your own review.</p>
+          </article>
+        </div>
       </section>
 
       <section className="section" id="how-it-works">
@@ -103,11 +115,11 @@ export default function Home() {
 
       <section className="section product-story">
         <div className="product-image">
-          <img src="/match-dashboard.png" alt="PropertyDealDesk match review workspace" />
+          <img src="/phone-alert.png" alt="PropertyDealDesk phone alert concept for possible matches" />
         </div>
         <div className="product-copy">
-          <span className="section-kicker">One clear place to review</span>
-          <h2>See the demand, the possible match and the original message together.</h2>
+          <span className="section-kicker">Built around agent judgment</span>
+          <h2>See the signal earlier, then decide what deserves action.</h2>
           <p>Match Edition helps you review faster without losing the context you need to make a professional decision.</p>
           <ul>
             <li><ClipboardText weight="fill" /><div><strong>Clear match queue</strong><span>Review likely WTB, WTR, WTS and WTL connections.</span></div></li>
