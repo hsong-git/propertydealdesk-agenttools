@@ -5,25 +5,18 @@ import {
   Car,
   CheckCircle,
   ClipboardText,
-  Copy,
   Eye,
   MagnifyingGlass,
   ShieldCheck,
   Sparkle,
+  WhatsappLogo,
   X,
 } from "@phosphor-icons/react";
-
-const inviteMessage =
-  "Hi HS Ong, I’m interested in Agent Tools / PropertyDealDesk Match Edition. Can you show me the private beta?";
+import { inviteMessage, whatsappMessageUrl } from "./contactConfig";
 
 export default function App() {
   const [showInvite, setShowInvite] = useState(false);
-  const [copied, setCopied] = useState(false);
-
-  async function copyInvite() {
-    await navigator.clipboard.writeText(inviteMessage);
-    setCopied(true);
-  }
+  const inviteWhatsappUrl = whatsappMessageUrl(inviteMessage);
 
   return (
     <main>
@@ -403,14 +396,20 @@ export default function App() {
             <span className="section-kicker">Private beta</span>
             <h2 id="invite-title">Start a simple conversation.</h2>
             <p>
-              Copy this message and send it privately to HS Ong. He will arrange a short
-              walkthrough before any setup.
+              Open WhatsApp with this message prefilled. HS Ong will arrange a short walkthrough
+              before any setup.
             </p>
             <div className="message-box">{inviteMessage}</div>
-            <button className="button modal-button" onClick={copyInvite}>
-              {copied ? <CheckCircle weight="fill" /> : <Copy weight="bold" />}
-              {copied ? "Message copied" : "Copy message"}
-            </button>
+            <a
+              className="button modal-button"
+              href={inviteWhatsappUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Message HS Ong on WhatsApp about PropertyDealDesk Match Edition"
+            >
+              <WhatsappLogo weight="fill" />
+              Message on WhatsApp
+            </a>
           </div>
         </div>
       )}
