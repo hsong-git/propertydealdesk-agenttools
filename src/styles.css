@@ -122,7 +122,10 @@ h1 span { color: #91e0b8; }
 .workflow-overview { max-width: 1320px; padding-top: 30px; }
 .workflow-overview .section-heading { margin-bottom: 34px; }
 .workflow-card { margin: 0; padding: 18px; border: 1px solid var(--line); border-radius: 22px; background: linear-gradient(180deg, #ffffff 0%, #f7fbf9 100%); box-shadow: 0 28px 80px rgba(9,47,67,.12); }
-.workflow-card img { display: block; width: 100%; height: auto; border-radius: 14px; background: white; }
+.workflow-expand-button { position: relative; display: block; width: 100%; padding: 0; border: 0; border-radius: 14px; background: white; overflow: hidden; box-shadow: none; }
+.workflow-expand-button img { display: block; width: 100%; height: auto; border-radius: 14px; background: white; transition: transform .22s ease, filter .22s ease; }
+.workflow-expand-button:hover img { transform: scale(1.008); filter: saturate(1.03); }
+.workflow-expand-label { position: absolute; right: 16px; bottom: 16px; z-index: 1; display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 0 15px; border-radius: 999px; background: rgba(9,47,67,.88); color: white; font-size: 13px; font-weight: 800; box-shadow: 0 10px 30px rgba(9,47,67,.24); }
 .workflow-card figcaption { max-width: 820px; margin: 16px auto 0; color: var(--muted); font-size: 14px; line-height: 1.55; text-align: center; }
 
 .beta-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 90px; align-items: center; }
@@ -155,6 +158,15 @@ footer a { color: var(--green-dark); font-weight: 800; }
 .modal > p { color: var(--muted); line-height: 1.6; }
 .message-box { margin: 22px 0 18px; padding: 17px; border: 1px solid var(--line); background: var(--cream); border-radius: 10px; color: #355552; line-height: 1.55; font-size: 14px; }
 .modal-button { width: 100%; }
+
+.image-lightbox-backdrop { position: fixed; inset: 0; z-index: 30; background: rgba(4,25,34,.82); display: grid; place-items: center; padding: 18px; }
+.image-lightbox { position: relative; width: min(1180px, 100%); max-height: calc(100vh - 36px); padding: 18px; border-radius: 22px; background: white; box-shadow: 0 30px 110px rgba(0,0,0,.38); display: flex; flex-direction: column; gap: 14px; }
+.image-lightbox-bar { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding-right: 46px; }
+.image-lightbox-bar h2 { margin: 6px 0 0; font-size: clamp(24px, 3.2vw, 38px); line-height: 1.05; letter-spacing: -.04em; }
+.image-lightbox .modal-close { top: 18px; right: 18px; }
+.image-lightbox-scroll { overflow: auto; border: 1px solid var(--line); border-radius: 15px; background: #f7fbf9; overscroll-behavior: contain; }
+.image-lightbox-scroll img { display: block; width: 100%; height: auto; max-height: calc(100vh - 190px); object-fit: contain; background: white; }
+.image-lightbox > p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5; text-align: center; }
 
 @media (max-width: 1000px) {
   nav a { display: none; }
@@ -209,9 +221,17 @@ footer a { color: var(--green-dark); font-weight: 800; }
   .video-copy { max-width: none; }
   .phone-video-frame { width: min(330px, 100%); }
   .workflow-overview { padding-top: 10px; }
-  .workflow-card { padding: 10px; border-radius: 16px; overflow-x: auto; }
-  .workflow-card img { min-width: 780px; border-radius: 10px; }
+  .workflow-card { padding: 10px; border-radius: 16px; }
+  .workflow-expand-button { border-radius: 10px; }
+  .workflow-expand-button img { border-radius: 10px; }
+  .workflow-expand-label { right: 10px; bottom: 10px; min-height: 34px; padding: 0 12px; font-size: 12px; }
   .workflow-card figcaption { text-align: left; }
+  .image-lightbox-backdrop { padding: 10px; align-items: center; }
+  .image-lightbox { width: 100%; max-height: calc(100vh - 20px); padding: 12px; border-radius: 18px; }
+  .image-lightbox-bar { padding-right: 44px; }
+  .image-lightbox-scroll { max-height: min(68vh, 650px); }
+  .image-lightbox-scroll img { width: 100%; min-width: 0; max-width: 100%; height: auto; max-height: min(62vh, 620px); object-fit: contain; }
+  .image-lightbox > p { text-align: left; }
   .final-cta { margin: 0 20px 65px; padding: 40px 26px; border-radius: 16px; }
   .final-cta .button, .catalogue-link a { width: 100%; justify-content: center; }
   footer { margin: 0 20px; padding: 32px 0 40px; grid-template-columns: 1fr; gap: 15px; }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ArrowRight,
   BellRinging,
@@ -16,7 +16,27 @@ import { inviteMessage, whatsappMessageUrl } from "./contactConfig";
 
 export default function App() {
   const [showInvite, setShowInvite] = useState(false);
+  const [showWorkflowLightbox, setShowWorkflowLightbox] = useState(false);
   const inviteWhatsappUrl = whatsappMessageUrl(inviteMessage);
+
+  useEffect(() => {
+    if (!showWorkflowLightbox) return;
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setShowWorkflowLightbox(false);
+      }
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [showWorkflowLightbox]);
 
   return (
     <main>
@@ -122,10 +142,18 @@ export default function App() {
           </p>
         </div>
         <figure className="workflow-card">
-          <img
-            src="/how-match-edition-works.png"
-            alt="Concept overview showing co-broke listing overload, Match Edition matching support, and phone match notifications"
-          />
+          <button
+            className="workflow-expand-button"
+            type="button"
+            onClick={() => setShowWorkflowLightbox(true)}
+            aria-label="Open larger view of the Match Edition workflow infographic"
+          >
+            <img
+              src="/how-match-edition-works.png"
+              alt="Concept overview showing co-broke listing overload, Match Edition matching support, and phone match notifications"
+            />
+            <span className="workflow-expand-label">Tap to enlarge</span>
+          </button>
           <figcaption>
             Concept visual for private beta explanation. Match Edition surfaces possible matches
             for review; agents still verify details before taking action.
@@ -431,6 +459,47 @@ export default function App() {
               <WhatsappLogo weight="fill" />
               Message on WhatsApp
             </a>
+          </div>
+        </div>
+      )}
+
+      {showWorkflowLightbox && (
+        <div
+          className="image-lightbox-backdrop"
+          role="presentation"
+          onMouseDown={() => setShowWorkflowLightbox(false)}
+        >
+          <div
+            className="image-lightbox"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="workflow-lightbox-title"
+            onMouseDown={(event) => event.stopPropagation()}
+          >
+            <div className="image-lightbox-bar">
+              <div>
+                <span className="section-kicker">Concept overview</span>
+                <h2 id="workflow-lightbox-title">How Match Edition works</h2>
+              </div>
+              <button
+                className="modal-close"
+                type="button"
+                aria-label="Close larger workflow view"
+                onClick={() => setShowWorkflowLightbox(false)}
+              >
+                <X weight="bold" />
+              </button>
+            </div>
+            <div className="image-lightbox-scroll">
+              <img
+                src="/how-match-edition-works.png"
+                alt="Expanded concept overview showing co-broke listing overload, Match Edition matching support, and phone match notifications"
+              />
+            </div>
+            <p>
+              Pinch-zoom or scroll within the image if needed. Possible matches still require agent
+              review before action.
+            </p>
           </div>
         </div>
       )}
