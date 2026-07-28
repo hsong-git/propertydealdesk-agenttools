@@ -74,6 +74,32 @@ export default function Home() {
         <p>Viewings, appointments, driving and client calls do not stop the co-broke messages. Match Edition helps you notice what may matter while you stay focused on your clients.</p>
       </section>
 
+      <section className="section photo-story">
+        <div className="section-heading centered">
+          <span className="section-kicker">Built for the working day</span>
+          <h2>For the moments when agents cannot keep watching every group.</h2>
+          <p>Match Edition is designed around the rhythm of real agent work: moving between appointments, handling clients, and deciding which possible opportunity deserves attention.</p>
+        </div>
+        <div className="photo-grid">
+          <article className="photo-card large">
+            <img src="/agent-between-appointments.png" alt="Real estate agent checking phone between property appointments" />
+            <div>
+              <span>Between appointments</span>
+              <h3>Stay aware while the group keeps moving.</h3>
+              <p>Possible matches can be noticed earlier while you are away from the desk.</p>
+            </div>
+          </article>
+          <article className="photo-card">
+            <img src="/agent-viewing-client.png" alt="Real estate agent guiding a client during a condominium viewing" />
+            <div>
+              <span>During viewings</span>
+              <h3>Focus on the client in front of you.</h3>
+              <p>Use alerts as a prompt to review later, not as a replacement for your judgment.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section className="section signal-feature" id="product-view">
         <div className="section-heading">
           <span className="section-kicker">What it helps you notice</span>
